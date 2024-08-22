@@ -27,7 +27,7 @@ jobs:
           context: ./flask-app
           file: ./flask-app/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/flask-app-demo:latest
 
       - name: Log out of Docker Hub
         run: docker logout
@@ -54,7 +54,7 @@ jobs:
           context: ./flask-frontend
           file: ./flask-frontend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/flask-frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/flask-frontend-demo:latest
 
       - name: Log out of Docker Hub
         run: docker logout
