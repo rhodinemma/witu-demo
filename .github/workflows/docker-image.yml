@@ -2,14 +2,10 @@ name: Build and Push Docker Images
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
     paths:
-      - 'flask-app/Dockerfile'
-      - 'flask-frontend/Dockerfile'
-  pull_request:
-    branches:
-      - master
+      - "flask-app/Dockerfile"
+      - "flask-frontend/Dockerfile"
 
 jobs:
   build-and-push-backend:
